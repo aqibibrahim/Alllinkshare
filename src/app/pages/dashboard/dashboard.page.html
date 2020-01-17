@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-input class="searchbar" placeholder="Search"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button class="search-btn" shape="round" fill="solid">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-title>dashboard</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let cat of allcategories" (click)="sbcategory_open(cat.cat_id)">
+        <img src="https://www.alllinkshare.com/frontend-assets/static-images/home/mobile_icons/{{cat.mobile_icon}}">
+        <p>{{cat.cat_title}}</p>
+        <!-- <div class="img-wrapper" [style.background-image]="'url(assets/img/ionic-image-gallery-' + image + '.jpg)'">
+        </div> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-card>
+    <ion-card-content>
+      <ion-row>
+   <ion-col class="brand-item" size="3" *ngFor="let cat of allcategories">
+         
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>
+<ion-footer>
+  <ion-tab-bar>
+    <ion-tab-button tab="support">
+      <img class="tab-icon-img" src="/src/assets/home.png" alt="">
+      <ion-label class="tab-text">ALS</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="support">
+      <img class="tab-icon-img" src="/src/assets/account.png" alt="">
+      <ion-label class="tab-text">Social</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="support">
+      <img class="tab-icon-img" src="/src/assets/home.png" alt="">
+      <ion-label class="tab-text">Live Tv</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="support">
+      <img class="tab-icon-img" src="/src/assets/tnc.png" alt="">
+      <ion-label class="tab-text">Coupon</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="support">
+      <img class="tab-icon-img" src="/src/assets/buying-guide.png" alt="">
+      <ion-label class="tab-text">Voice</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

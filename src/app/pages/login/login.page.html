@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- /**
+ * Shoppr - E-commerce app starter Ionic 4(https://www.enappd.com)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source .
+ */ -->
+
+<!-- <ion-header padding color="mytheme" class="mybg head">
+  <ion-row justify-content-center>
+    <ion-img src="assets/images/login.png" class="head-image"></ion-img>
+  </ion-row>
+</ion-header> -->
+
+<ion-content no-padding>
+  <div class="main">
+    <ion-card no-margin class="card">
+      <ion-card-content>
+          <ion-row class="row">
+              <div class="fire-logo">
+                  <img src="../../assets/imgs/fire.png" class="img-logo">
+                  <ion-text><h2 no-margin margin-vertical text-center>Sign In</h2></ion-text>
+                </div>
+          </ion-row>
+          <ion-row>
+            <div radio-group >
+              <label>User Type</label>
+              <div>
+                  <label>Buyer</label>
+                  <ion-radio value="buyer" (ionSelect)="radio_select('buyer')"></ion-radio>
+                  <label>Seller</label>
+                  <ion-radio value="seller" (ionSelect)="radio_select('seller')"></ion-radio>
+              </div>
+          </div>
+          <!-- <div>
+              <label>CGT member ID </label>
+              <input type="text" [disabled]="number" placeholder="Enter Number">
+              <input type="text" [disabled]="email" placeholder="Enter Email">
+          </div>
+          <div>
+              <label>Church Name </label>
+              <input type="text" [disabled]="cn">
+          </div> -->
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-input clearInput type="email" placeholder="Email"  [(ngModel)]="email" class="input" padding-horizontal clear-input="true"></ion-input>
+                <ion-input clearInput type="number" placeholder="Phone Number"  [(ngModel)]="number" class="input" padding-horizontal clear-input="true"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password" class="input" padding-horizontal clear-input="true"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-text float-end color="medium" ><h6 no-margin text-end class="small">Forgot Password?</h6></ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button expand="block" color="undefined" class="btn-transition" (click)="login()"><strong class="white">Sign In</strong></ion-button>
+              </ion-col>
+            </ion-row>
+            <div class="line"></div>
+            <ion-row>
+              <ion-col>
+                <ion-button expand="block" fill="outline" color="undefined"  class="btn-color"><strong>New? Create an Account</strong></ion-button>
+              </ion-col>
+            </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
